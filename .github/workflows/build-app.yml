@@ -60,6 +60,7 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Deploy with Nuitka on Windows
+      if: matrix.os == 'windows-latest'
       run: python3 -m nuitka --msvc --onefile --follow-imports --assume-yes-for-downloads scatterplot.py
     - name: Deploy with Nuitka on non-Windows
       if: matrix.os != 'windows-latest'
