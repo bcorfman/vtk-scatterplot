@@ -1,8 +1,9 @@
 #!/usr/bin/env python
-
 import math
-
 import vtk
+
+
+__version__ = '1.0'
 
 
 def main():
